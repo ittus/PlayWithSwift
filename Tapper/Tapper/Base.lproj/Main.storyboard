@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -20,43 +21,96 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg" translatesAutoresizingMaskIntoConstraints="NO" id="aa7-we-5WV">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Tapper" translatesAutoresizingMaskIntoConstraints="NO" id="mz9-jf-hCf">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Tapper" translatesAutoresizingMaskIntoConstraints="NO" id="mz9-jf-hCf" userLabel="ivLogo">
                                 <rect key="frame" x="102" y="40" width="396" height="86"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="86" id="oRQ-kd-yCC"/>
                                     <constraint firstAttribute="width" constant="396" id="wHE-Cy-njc"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QBg-Y2-o9x">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QBg-Y2-o9x" userLabel="btnPlay">
                                 <rect key="frame" x="100" y="460" width="400" height="100"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="mIy-Yt-j6H"/>
                                     <constraint firstAttribute="width" constant="400" id="uES-yd-1yd"/>
                                 </constraints>
                                 <state key="normal" title="Button" image="btn_play"/>
+                                <connections>
+                                    <action selector="btnPlayACTION:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RG6-dv-1ec"/>
+                                </connections>
                             </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="How many taps to win?" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PNa-aa-iLY" userLabel="txtInput">
+                                <rect key="frame" x="150" y="405" width="300" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="1ej-bS-3nh"/>
+                                    <constraint firstAttribute="width" constant="300" id="QAQ-jO-07y"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <stackView opaque="NO" contentMode="scaleAspectFit" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="jKR-1X-9lB">
+                                <rect key="frame" x="225" y="20" width="150" height="150"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="k0s-2A-9mi">
+                                        <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
+                                        <subviews>
+                                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Oh3-Jx-xE1" userLabel="btnStar">
+                                                <rect key="frame" x="-225" y="-20" width="457" height="0.0"/>
+                                                <state key="normal" image="star"/>
+                                                <connections>
+                                                    <action selector="btnStarAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4Vb-s7-Egp"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="2ra-GT-GRA"/>
+                                    <constraint firstAttribute="height" constant="150" id="JFT-ek-zfj"/>
+                                </constraints>
+                            </stackView>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100 taps" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YRB-pi-yqT" userLabel="lblCountResult">
+                                <rect key="frame" x="240" y="282" width="121" height="36"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="30"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="jKR-1X-9lB" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="2qf-cx-g7V"/>
+                            <constraint firstItem="jKR-1X-9lB" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="20" id="4pY-kW-peZ"/>
                             <constraint firstItem="mz9-jf-hCf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="6nN-UV-bkn"/>
                             <constraint firstItem="QBg-Y2-o9x" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="JiL-Yf-gbn"/>
                             <constraint firstItem="aa7-we-5WV" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Kpi-lJ-VWL"/>
+                            <constraint firstItem="QBg-Y2-o9x" firstAttribute="top" secondItem="PNa-aa-iLY" secondAttribute="bottom" constant="25" id="TI2-Fe-pSN"/>
+                            <constraint firstItem="YRB-pi-yqT" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="dlA-WW-oN6"/>
+                            <constraint firstItem="QBg-Y2-o9x" firstAttribute="centerX" secondItem="PNa-aa-iLY" secondAttribute="centerX" id="fFI-d2-355"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="QBg-Y2-o9x" secondAttribute="bottom" constant="40" id="gk7-dU-kCr"/>
+                            <constraint firstItem="YRB-pi-yqT" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="hb2-2X-zDd"/>
                             <constraint firstItem="mz9-jf-hCf" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="hqp-27-9Le"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="aa7-we-5WV" secondAttribute="bottom" id="m05-43-0BG"/>
                             <constraint firstAttribute="trailing" secondItem="aa7-we-5WV" secondAttribute="trailing" id="tHj-Mg-5FN"/>
                             <constraint firstItem="aa7-we-5WV" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="vOY-ff-mom"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="btnPlay" destination="QBg-Y2-o9x" id="V4j-LM-lJt"/>
+                        <outlet property="btnStart" destination="Oh3-Jx-xE1" id="VFj-KY-Mf9"/>
+                        <outlet property="ivLogo" destination="mz9-jf-hCf" id="0ai-0j-ZGf"/>
+                        <outlet property="lblCountRes" destination="YRB-pi-yqT" id="mmc-Su-2TP"/>
+                        <outlet property="txtInput" destination="PNa-aa-iLY" id="sRA-fn-5Ts"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="480" y="450"/>
+            <point key="canvasLocation" x="484" y="271"/>
         </scene>
     </scenes>
     <resources>
         <image name="Tapper" width="521" height="115"/>
         <image name="bg" width="3333" height="3333"/>
         <image name="btn_play" width="1313" height="363"/>
+        <image name="star" width="457" height="505"/>
     </resources>
 </document>
