@@ -39,8 +39,8 @@ class Character {
         self._attachPwr = attachPwr
     }
     
-    func attemptAttack(attackPwr: Int) -> Bool {
-        self._hp -= attachPwr
+    func attemptAttack(attackedPwr: Int) -> Bool {
+        self._hp -= attackedPwr
         return true
     }
     
