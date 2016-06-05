@@ -9,10 +9,22 @@
 import UIKit
 
 class ViewController: UIViewController {
+    @IBOutlet weak var imgMonster: UIImageView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        var imgArray = [UIImage]()
+        for x in 1...4 {
+            print("idle\(x).png")
+            let img = UIImage(named: "idle\(x).png")
+            imgArray.append(img!)
+        }
+        
+        imgMonster.animationImages = imgArray
+        imgMonster.animationDuration = 0.8
+        imgMonster.animationRepeatCount = 0
+        imgMonster.startAnimating()
     }
 
     override func didReceiveMemoryWarning() {
