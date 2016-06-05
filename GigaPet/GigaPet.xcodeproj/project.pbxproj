@@ -1,0 +1,507 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0DE8E6931D04887C00E34B5F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE8E6921D04887C00E34B5F /* AppDelegate.swift */; };
+		0DE8E6951D04887C00E34B5F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE8E6941D04887C00E34B5F /* ViewController.swift */; };
+		0DE8E6981D04887C00E34B5F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0DE8E6961D04887C00E34B5F /* Main.storyboard */; };
+		0DE8E69A1D04887C00E34B5F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0DE8E6991D04887C00E34B5F /* Assets.xcassets */; };
+		0DE8E69D1D04887C00E34B5F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0DE8E69B1D04887C00E34B5F /* LaunchScreen.storyboard */; };
+		0DE8E6A81D04887C00E34B5F /* GigaPetTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE8E6A71D04887C00E34B5F /* GigaPetTests.swift */; };
+		0DE8E6B31D04887C00E34B5F /* GigaPetUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE8E6B21D04887C00E34B5F /* GigaPetUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		0DE8E6A41D04887C00E34B5F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0DE8E6871D04887C00E34B5F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0DE8E68E1D04887C00E34B5F;
+			remoteInfo = GigaPet;
+		};
+		0DE8E6AF1D04887C00E34B5F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0DE8E6871D04887C00E34B5F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0DE8E68E1D04887C00E34B5F;
+			remoteInfo = GigaPet;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0DE8E68F1D04887C00E34B5F /* GigaPet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GigaPet.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0DE8E6921D04887C00E34B5F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		0DE8E6941D04887C00E34B5F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		0DE8E6971D04887C00E34B5F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		0DE8E6991D04887C00E34B5F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		0DE8E69C1D04887C00E34B5F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		0DE8E69E1D04887C00E34B5F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0DE8E6A31D04887C00E34B5F /* GigaPetTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GigaPetTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0DE8E6A71D04887C00E34B5F /* GigaPetTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GigaPetTests.swift; sourceTree = "<group>"; };
+		0DE8E6A91D04887C00E34B5F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0DE8E6AE1D04887C00E34B5F /* GigaPetUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GigaPetUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0DE8E6B21D04887C00E34B5F /* GigaPetUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GigaPetUITests.swift; sourceTree = "<group>"; };
+		0DE8E6B41D04887C00E34B5F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0DE8E68C1D04887C00E34B5F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0DE8E6A01D04887C00E34B5F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0DE8E6AB1D04887C00E34B5F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0DE8E6861D04887C00E34B5F = {
+			isa = PBXGroup;
+			children = (
+				0DE8E6911D04887C00E34B5F /* GigaPet */,
+				0DE8E6A61D04887C00E34B5F /* GigaPetTests */,
+				0DE8E6B11D04887C00E34B5F /* GigaPetUITests */,
+				0DE8E6901D04887C00E34B5F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		0DE8E6901D04887C00E34B5F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0DE8E68F1D04887C00E34B5F /* GigaPet.app */,
+				0DE8E6A31D04887C00E34B5F /* GigaPetTests.xctest */,
+				0DE8E6AE1D04887C00E34B5F /* GigaPetUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0DE8E6911D04887C00E34B5F /* GigaPet */ = {
+			isa = PBXGroup;
+			children = (
+				0DE8E6921D04887C00E34B5F /* AppDelegate.swift */,
+				0DE8E6941D04887C00E34B5F /* ViewController.swift */,
+				0DE8E6961D04887C00E34B5F /* Main.storyboard */,
+				0DE8E6991D04887C00E34B5F /* Assets.xcassets */,
+				0DE8E69B1D04887C00E34B5F /* LaunchScreen.storyboard */,
+				0DE8E69E1D04887C00E34B5F /* Info.plist */,
+			);
+			path = GigaPet;
+			sourceTree = "<group>";
+		};
+		0DE8E6A61D04887C00E34B5F /* GigaPetTests */ = {
+			isa = PBXGroup;
+			children = (
+				0DE8E6A71D04887C00E34B5F /* GigaPetTests.swift */,
+				0DE8E6A91D04887C00E34B5F /* Info.plist */,
+			);
+			path = GigaPetTests;
+			sourceTree = "<group>";
+		};
+		0DE8E6B11D04887C00E34B5F /* GigaPetUITests */ = {
+			isa = PBXGroup;
+			children = (
+				0DE8E6B21D04887C00E34B5F /* GigaPetUITests.swift */,
+				0DE8E6B41D04887C00E34B5F /* Info.plist */,
+			);
+			path = GigaPetUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		0DE8E68E1D04887C00E34B5F /* GigaPet */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0DE8E6B71D04887C00E34B5F /* Build configuration list for PBXNativeTarget "GigaPet" */;
+			buildPhases = (
+				0DE8E68B1D04887C00E34B5F /* Sources */,
+				0DE8E68C1D04887C00E34B5F /* Frameworks */,
+				0DE8E68D1D04887C00E34B5F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GigaPet;
+			productName = GigaPet;
+			productReference = 0DE8E68F1D04887C00E34B5F /* GigaPet.app */;
+			productType = "com.apple.product-type.application";
+		};
+		0DE8E6A21D04887C00E34B5F /* GigaPetTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0DE8E6BA1D04887C00E34B5F /* Build configuration list for PBXNativeTarget "GigaPetTests" */;
+			buildPhases = (
+				0DE8E69F1D04887C00E34B5F /* Sources */,
+				0DE8E6A01D04887C00E34B5F /* Frameworks */,
+				0DE8E6A11D04887C00E34B5F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0DE8E6A51D04887C00E34B5F /* PBXTargetDependency */,
+			);
+			name = GigaPetTests;
+			productName = GigaPetTests;
+			productReference = 0DE8E6A31D04887C00E34B5F /* GigaPetTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		0DE8E6AD1D04887C00E34B5F /* GigaPetUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0DE8E6BD1D04887C00E34B5F /* Build configuration list for PBXNativeTarget "GigaPetUITests" */;
+			buildPhases = (
+				0DE8E6AA1D04887C00E34B5F /* Sources */,
+				0DE8E6AB1D04887C00E34B5F /* Frameworks */,
+				0DE8E6AC1D04887C00E34B5F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0DE8E6B01D04887C00E34B5F /* PBXTargetDependency */,
+			);
+			name = GigaPetUITests;
+			productName = GigaPetUITests;
+			productReference = 0DE8E6AE1D04887C00E34B5F /* GigaPetUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0DE8E6871D04887C00E34B5F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = "Minh Thang Vu";
+				TargetAttributes = {
+					0DE8E68E1D04887C00E34B5F = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+					0DE8E6A21D04887C00E34B5F = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = 0DE8E68E1D04887C00E34B5F;
+					};
+					0DE8E6AD1D04887C00E34B5F = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = 0DE8E68E1D04887C00E34B5F;
+					};
+				};
+			};
+			buildConfigurationList = 0DE8E68A1D04887C00E34B5F /* Build configuration list for PBXProject "GigaPet" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 0DE8E6861D04887C00E34B5F;
+			productRefGroup = 0DE8E6901D04887C00E34B5F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0DE8E68E1D04887C00E34B5F /* GigaPet */,
+				0DE8E6A21D04887C00E34B5F /* GigaPetTests */,
+				0DE8E6AD1D04887C00E34B5F /* GigaPetUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		0DE8E68D1D04887C00E34B5F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0DE8E69D1D04887C00E34B5F /* LaunchScreen.storyboard in Resources */,
+				0DE8E69A1D04887C00E34B5F /* Assets.xcassets in Resources */,
+				0DE8E6981D04887C00E34B5F /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0DE8E6A11D04887C00E34B5F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0DE8E6AC1D04887C00E34B5F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0DE8E68B1D04887C00E34B5F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0DE8E6951D04887C00E34B5F /* ViewController.swift in Sources */,
+				0DE8E6931D04887C00E34B5F /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0DE8E69F1D04887C00E34B5F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0DE8E6A81D04887C00E34B5F /* GigaPetTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0DE8E6AA1D04887C00E34B5F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0DE8E6B31D04887C00E34B5F /* GigaPetUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0DE8E6A51D04887C00E34B5F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0DE8E68E1D04887C00E34B5F /* GigaPet */;
+			targetProxy = 0DE8E6A41D04887C00E34B5F /* PBXContainerItemProxy */;
+		};
+		0DE8E6B01D04887C00E34B5F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0DE8E68E1D04887C00E34B5F /* GigaPet */;
+			targetProxy = 0DE8E6AF1D04887C00E34B5F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		0DE8E6961D04887C00E34B5F /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0DE8E6971D04887C00E34B5F /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		0DE8E69B1D04887C00E34B5F /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0DE8E69C1D04887C00E34B5F /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		0DE8E6B51D04887C00E34B5F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		0DE8E6B61D04887C00E34B5F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		0DE8E6B81D04887C00E34B5F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = GigaPet/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ittus.GigaPet;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		0DE8E6B91D04887C00E34B5F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = GigaPet/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ittus.GigaPet;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		0DE8E6BB1D04887C00E34B5F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = GigaPetTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ittus.GigaPetTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GigaPet.app/GigaPet";
+			};
+			name = Debug;
+		};
+		0DE8E6BC1D04887C00E34B5F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = GigaPetTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ittus.GigaPetTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GigaPet.app/GigaPet";
+			};
+			name = Release;
+		};
+		0DE8E6BE1D04887C00E34B5F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = GigaPetUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ittus.GigaPetUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = GigaPet;
+			};
+			name = Debug;
+		};
+		0DE8E6BF1D04887C00E34B5F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = GigaPetUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ittus.GigaPetUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = GigaPet;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0DE8E68A1D04887C00E34B5F /* Build configuration list for PBXProject "GigaPet" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0DE8E6B51D04887C00E34B5F /* Debug */,
+				0DE8E6B61D04887C00E34B5F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0DE8E6B71D04887C00E34B5F /* Build configuration list for PBXNativeTarget "GigaPet" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0DE8E6B81D04887C00E34B5F /* Debug */,
+				0DE8E6B91D04887C00E34B5F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		0DE8E6BA1D04887C00E34B5F /* Build configuration list for PBXNativeTarget "GigaPetTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0DE8E6BB1D04887C00E34B5F /* Debug */,
+				0DE8E6BC1D04887C00E34B5F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		0DE8E6BD1D04887C00E34B5F /* Build configuration list for PBXNativeTarget "GigaPetUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0DE8E6BE1D04887C00E34B5F /* Debug */,
+				0DE8E6BF1D04887C00E34B5F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0DE8E6871D04887C00E34B5F /* Project object */;
+}
