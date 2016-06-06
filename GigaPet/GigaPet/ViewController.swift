@@ -10,6 +10,9 @@ import UIKit
 
 class ViewController: UIViewController {
     @IBOutlet weak var imgMonster: UIImageView!
+    
+    @IBOutlet weak var imgHeart: DragImg!
+    @IBOutlet weak var imgFood: DragImg!
 
     override func viewDidLoad() {
         super.viewDidLoad()
