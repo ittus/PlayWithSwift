@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AVFoundation
 
 class ViewController: UIViewController {
     @IBOutlet weak var imgMonster: MonsterImg!
@@ -28,6 +29,16 @@ class ViewController: UIViewController {
     
     var timer: NSTimer!
     
+    var monsterHappy = false
+    
+    var currentItem: UInt32 = 0
+    
+    var musicPlayer: AVAudioPlayer!
+    var sfxBite: AVAudioPlayer!
+    var sfxHeart: AVAudioPlayer!
+    var sfxDeath: AVAudioPlayer!
+    var sfxSkull: AVAudioPlayer!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -39,11 +50,35 @@ class ViewController: UIViewController {
         penalty3.alpha = DIM_ALPHA
         
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "itemDroppedOnCharacter:", name: "onTargetDropped", object: nil)
-        startTime()
+        
+        do {
+            try musicPlayer = AVAudioPlayer(contentsOfURL: NSURL(fileURLWithPath:
+                NSBundle.mainBundle().pathForResource("cave-music", ofType: "mp3")!))
+            try sfxBite = AVAudioPlayer(contentsOfURL: NSURL(fileURLWithPath:
+                NSBundle.mainBundle().pathForResource("bite", ofType: "wav")!))
+            
+            try sfxDeath  = AVAudioPlayer(contentsOfURL: NSURL(fileURLWithPath:
+                NSBundle.mainBundle().pathForResource("death", ofType: "wav")!))
+            
+            try sfxSkull = AVAudioPlayer(contentsOfURL: NSURL(fileURLWithPath:
+                NSBundle.mainBundle().pathForResource("skull", ofType: "wav")!))
+            
+            musicPlayer.prepareToPlay()
+            musicPlayer.play()
+            
+            sfxBite.prepareToPlay()
+            sfxDeath.prepareToPlay()
+            sfxSkull.prepareToPlay()
+
+        } catch let err as NSError {
+            print(err.debugDescription)
+        }
+        
+        startTimer()
        
     }
     
-    func startTime() {
+    func startTimer() {
         if timer != nil {
             timer.invalidate()
         }
@@ -52,35 +87,72 @@ class ViewController: UIViewController {
     }
     
     func changeGameState() {
-        penalties++
         
-        if penalties == 1 {
-            penalty1.alpha = OPAQUE
-            penalty2.alpha = DIM_ALPHA
-        } else if penalties == 2 {
-            penalty2.alpha = OPAQUE
-            penalty3.alpha = DIM_ALPHA
-        } else if penalties >= 3 {
-            penalty3.alpha = OPAQUE
+        if !monsterHappy {
+            
+            sfxSkull.play()
+            penalties++
+            
+            if penalties == 1 {
+                penalty1.alpha = OPAQUE
+                penalty2.alpha = DIM_ALPHA
+            } else if penalties == 2 {
+                penalty2.alpha = OPAQUE
+                penalty3.alpha = DIM_ALPHA
+            } else if penalties >= 3 {
+                penalty3.alpha = OPAQUE
+            } else {
+                penalty1.alpha = DIM_ALPHA
+                penalty2.alpha = DIM_ALPHA
+                penalty3.alpha = DIM_ALPHA
+            }
+            
+            if penalties >= MAX_PENALTIES {
+                gameOver()
+            }
+        }
+        
+        let rand = arc4random_uniform(2)
+        
+        if rand == 0 {
+            imgFood.alpha = DIM_ALPHA
+            imgFood.userInteractionEnabled = false
+            imgHeart.alpha = OPAQUE
+            imgHeart.userInteractionEnabled = true
         } else {
-            penalty1.alpha = DIM_ALPHA
-            penalty2.alpha = DIM_ALPHA
-            penalty3.alpha = DIM_ALPHA
+            imgHeart.alpha = DIM_ALPHA
+            imgHeart.userInteractionEnabled = false
+            imgFood.alpha = OPAQUE
+            imgFood.userInteractionEnabled = true
+            
         }
         
-        if penalties >= MAX_PENALTIES {
-            gameOver()
-        }
+        currentItem = rand
+        monsterHappy = false
         
     }
     
     func gameOver() {
         timer.invalidate()
         imgMonster.playDeadAnimation()
+        sfxDeath.play()
     }
     
     func itemDroppedOnCharacter(notif: AnyObject) {
         print("Item drop on Object")
+        monsterHappy = true
+        startTimer()
+        
+        imgFood.alpha = DIM_ALPHA
+        imgFood.userInteractionEnabled = false
+        imgHeart.alpha = DIM_ALPHA
+        imgHeart.userInteractionEnabled = false
+        
+        if currentItem == 0 {
+            
+        } else {
+            sfxBite.play()
+        }
     }
     
     override func didReceiveMemoryWarning() {
