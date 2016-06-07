@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0D169D201D05D875001ACDF1 /* DragImg.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D169D1F1D05D874001ACDF1 /* DragImg.swift */; };
+		0D816EA71D0712AD00FD3881 /* MonsterImg.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D816EA61D0712AD00FD3881 /* MonsterImg.swift */; };
 		0DE8E6931D04887C00E34B5F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE8E6921D04887C00E34B5F /* AppDelegate.swift */; };
 		0DE8E6951D04887C00E34B5F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE8E6941D04887C00E34B5F /* ViewController.swift */; };
 		0DE8E6981D04887C00E34B5F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0DE8E6961D04887C00E34B5F /* Main.storyboard */; };
@@ -36,6 +37,7 @@
 
 /* Begin PBXFileReference section */
 		0D169D1F1D05D874001ACDF1 /* DragImg.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DragImg.swift; sourceTree = "<group>"; };
+		0D816EA61D0712AD00FD3881 /* MonsterImg.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MonsterImg.swift; sourceTree = "<group>"; };
 		0DE8E68F1D04887C00E34B5F /* GigaPet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GigaPet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0DE8E6921D04887C00E34B5F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0DE8E6941D04887C00E34B5F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -106,6 +108,7 @@
 				0DE8E69B1D04887C00E34B5F /* LaunchScreen.storyboard */,
 				0DE8E69E1D04887C00E34B5F /* Info.plist */,
 				0D169D1F1D05D874001ACDF1 /* DragImg.swift */,
+				0D816EA61D0712AD00FD3881 /* MonsterImg.swift */,
 			);
 			path = GigaPet;
 			sourceTree = "<group>";
@@ -259,6 +262,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0D816EA71D0712AD00FD3881 /* MonsterImg.swift in Sources */,
 				0D169D201D05D875001ACDF1 /* DragImg.swift in Sources */,
 				0DE8E6951D04887C00E34B5F /* ViewController.swift in Sources */,
 				0DE8E6931D04887C00E34B5F /* AppDelegate.swift in Sources */,

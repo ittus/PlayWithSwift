@@ -9,7 +9,7 @@
 import UIKit
 
 class ViewController: UIViewController {
-    @IBOutlet weak var imgMonster: UIImageView!
+    @IBOutlet weak var imgMonster: MonsterImg!
     
     @IBOutlet weak var imgHeart: DragImg!
     @IBOutlet weak var imgFood: DragImg!
@@ -17,17 +17,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        var imgArray = [UIImage]()
-        for x in 1...4 {
-            print("idle\(x).png")
-            let img = UIImage(named: "idle\(x).png")
-            imgArray.append(img!)
-        }
-        
-        imgMonster.animationImages = imgArray
-        imgMonster.animationDuration = 0.8
-        imgMonster.animationRepeatCount = 0
-        imgMonster.startAnimating()
+       
     }
 
     override func didReceiveMemoryWarning() {

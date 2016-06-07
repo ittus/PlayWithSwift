@@ -60,7 +60,7 @@
                                     </imageView>
                                 </subviews>
                             </stackView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="idle1" translatesAutoresizingMaskIntoConstraints="NO" id="xFa-3H-uO0">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="idle1" translatesAutoresizingMaskIntoConstraints="NO" id="xFa-3H-uO0" customClass="MonsterImg" customModule="GigaPet" customModuleProvider="target">
                                 <rect key="frame" x="-30" y="245" width="536" height="337"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="536" id="N5d-18-LKc"/>
