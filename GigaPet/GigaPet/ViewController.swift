@@ -17,9 +17,18 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        imgHeart.dropTarget = imgMonster
+        imgFood.dropTarget = imgMonster
+        
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "itemDroppedOnCharacter:", name: "onTargetDropped", object: nil)
+        
        
     }
-
+    
+    func itemDroppedOnCharacter(notif: AnyObject) {
+        print("Item drop on Object")
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
