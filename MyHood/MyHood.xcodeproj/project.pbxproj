@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0D5C3BA91D19A106008839EE /* AddPostVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D5C3BA81D19A106008839EE /* AddPostVC.swift */; };
 		0DA6235E1D16A13800CA81A4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA6235D1D16A13800CA81A4 /* AppDelegate.swift */; };
 		0DA623601D16A13800CA81A4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA6235F1D16A13800CA81A4 /* ViewController.swift */; };
 		0DA623631D16A13800CA81A4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0DA623611D16A13800CA81A4 /* Main.storyboard */; };
@@ -36,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0D5C3BA81D19A106008839EE /* AddPostVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddPostVC.swift; sourceTree = "<group>"; };
 		0DA6235A1D16A13800CA81A4 /* MyHood.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyHood.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0DA6235D1D16A13800CA81A4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0DA6235F1D16A13800CA81A4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -78,6 +80,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0D5C3BA71D19A0D0008839EE /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				0DA6235F1D16A13800CA81A4 /* ViewController.swift */,
+				0D5C3BA81D19A106008839EE /* AddPostVC.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
 		0DA623511D16A13800CA81A4 = {
 			isa = PBXGroup;
 			children = (
@@ -101,13 +112,11 @@
 		0DA6235C1D16A13800CA81A4 /* MyHood */ = {
 			isa = PBXGroup;
 			children = (
+				0D5C3BA71D19A0D0008839EE /* Controller */,
 				0DA6238C1D16A15000CA81A4 /* View */,
 				0DA6238B1D16A14800CA81A4 /* Model */,
 				0DA6235D1D16A13800CA81A4 /* AppDelegate.swift */,
-				0DA6235F1D16A13800CA81A4 /* ViewController.swift */,
-				0DA623611D16A13800CA81A4 /* Main.storyboard */,
 				0DA623641D16A13800CA81A4 /* Assets.xcassets */,
-				0DA623661D16A13800CA81A4 /* LaunchScreen.storyboard */,
 				0DA623691D16A13900CA81A4 /* Info.plist */,
 			);
 			path = MyHood;
@@ -142,6 +151,8 @@
 		0DA6238C1D16A15000CA81A4 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				0DA623611D16A13800CA81A4 /* Main.storyboard */,
+				0DA623661D16A13800CA81A4 /* LaunchScreen.storyboard */,
 				0DA6238F1D16A4AB00CA81A4 /* PostCell.swift */,
 			);
 			name = View;
@@ -280,6 +291,7 @@
 			files = (
 				0DA6238E1D16A15A00CA81A4 /* Post.swift in Sources */,
 				0DA623601D16A13800CA81A4 /* ViewController.swift in Sources */,
+				0D5C3BA91D19A106008839EE /* AddPostVC.swift in Sources */,
 				0DA6235E1D16A13800CA81A4 /* AppDelegate.swift in Sources */,
 				0DA623901D16A4AB00CA81A4 /* PostCell.swift in Sources */,
 			);
@@ -508,6 +520,7 @@
 				0DA623841D16A13900CA81A4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0DA623851D16A13900CA81A4 /* Build configuration list for PBXNativeTarget "MyHoodTests" */ = {
 			isa = XCConfigurationList;
@@ -516,6 +529,7 @@
 				0DA623871D16A13900CA81A4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0DA623881D16A13900CA81A4 /* Build configuration list for PBXNativeTarget "MyHoodUITests" */ = {
 			isa = XCConfigurationList;
@@ -524,6 +538,7 @@
 				0DA6238A1D16A13900CA81A4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
