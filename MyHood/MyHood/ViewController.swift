@@ -18,15 +18,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         tableView.dataSource = self
         tableView.delegate = self
         
-        var post1 = Post(imagePath: "", title: "Post 1", description: "Description 1")
-        var post2 = Post(imagePath: "", title: "Post 2", description: "Description 2")
-        var post3 = Post(imagePath: "", title: "Post 3", description: "Description 3")
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "onPostLoaded:", name: "postsLoaded", object: nil)
+        DataServices.instance.loadPosts()
         
-        posts.append(post1)
-        posts.append(post2)
-        posts.append(post3)
-        
-        tableView.reloadData()
     }
 
     override func didReceiveMemoryWarning() {
@@ -42,7 +36,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
         
-        let post = posts[indexPath.row]
+        let post = DataServices.instance.loadedPosts[indexPath.row]
         if let cell = tableView.dequeueReusableCellWithIdentifier("PostCell") as? PostCell {
             cell.configureCell(post)
             return cell
@@ -64,7 +58,12 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return posts.count
+        return DataServices.instance.loadedPosts.count
+    }
+    
+    
+    func onPostLoaded(notif: AnyObject) {
+        tableView.reloadData()
     }
 
 

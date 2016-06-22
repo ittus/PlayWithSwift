@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0D5C3BA91D19A106008839EE /* AddPostVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D5C3BA81D19A106008839EE /* AddPostVC.swift */; };
+		0D5C3BAC1D19ACBC008839EE /* DataServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D5C3BAB1D19ACBC008839EE /* DataServices.swift */; };
 		0DA6235E1D16A13800CA81A4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA6235D1D16A13800CA81A4 /* AppDelegate.swift */; };
 		0DA623601D16A13800CA81A4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA6235F1D16A13800CA81A4 /* ViewController.swift */; };
 		0DA623631D16A13800CA81A4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0DA623611D16A13800CA81A4 /* Main.storyboard */; };
@@ -38,6 +39,7 @@
 
 /* Begin PBXFileReference section */
 		0D5C3BA81D19A106008839EE /* AddPostVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddPostVC.swift; sourceTree = "<group>"; };
+		0D5C3BAB1D19ACBC008839EE /* DataServices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataServices.swift; sourceTree = "<group>"; };
 		0DA6235A1D16A13800CA81A4 /* MyHood.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyHood.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0DA6235D1D16A13800CA81A4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0DA6235F1D16A13800CA81A4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -89,6 +91,14 @@
 			name = Controller;
 			sourceTree = "<group>";
 		};
+		0D5C3BAA1D19ACB1008839EE /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				0D5C3BAB1D19ACBC008839EE /* DataServices.swift */,
+			);
+			name = Services;
+			sourceTree = "<group>";
+		};
 		0DA623511D16A13800CA81A4 = {
 			isa = PBXGroup;
 			children = (
@@ -112,6 +122,7 @@
 		0DA6235C1D16A13800CA81A4 /* MyHood */ = {
 			isa = PBXGroup;
 			children = (
+				0D5C3BAA1D19ACB1008839EE /* Services */,
 				0D5C3BA71D19A0D0008839EE /* Controller */,
 				0DA6238C1D16A15000CA81A4 /* View */,
 				0DA6238B1D16A14800CA81A4 /* Model */,
@@ -292,6 +303,7 @@
 				0DA6238E1D16A15A00CA81A4 /* Post.swift in Sources */,
 				0DA623601D16A13800CA81A4 /* ViewController.swift in Sources */,
 				0D5C3BA91D19A106008839EE /* AddPostVC.swift in Sources */,
+				0D5C3BAC1D19ACBC008839EE /* DataServices.swift in Sources */,
 				0DA6235E1D16A13800CA81A4 /* AppDelegate.swift in Sources */,
 				0DA623901D16A4AB00CA81A4 /* PostCell.swift in Sources */,
 			);
