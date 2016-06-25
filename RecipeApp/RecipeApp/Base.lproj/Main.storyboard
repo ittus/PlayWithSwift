@@ -29,7 +29,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="114.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ing-fE-7Td">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ing-fE-7Td">
                                                     <rect key="frame" x="0.0" y="0.0" width="600" height="114.5"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fat Boy Hamburger" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tFW-e3-TOU">
@@ -87,10 +87,10 @@
             </objects>
             <point key="canvasLocation" x="1152" y="429"/>
         </scene>
-        <!--View Controller-->
+        <!--Add RecipeVC-->
         <scene sceneID="lfM-Jy-wUP">
             <objects>
-                <viewController id="maS-fR-0VM" sceneMemberID="viewController">
+                <viewController id="maS-fR-0VM" customClass="AddRecipeVC" customModule="RecipeApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="VUx-9b-EqH"/>
                         <viewControllerLayoutGuide type="bottom" id="2GW-Ox-ZS0"/>
@@ -114,7 +114,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bDM-ce-tDb">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bDM-ce-tDb">
                                 <rect key="frame" x="213" y="247" width="175" height="175"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="175" id="XDL-oz-6qT"/>
@@ -125,8 +125,11 @@
                                 <rect key="frame" x="213" y="247" width="175" height="175"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                 <state key="normal" title="+Add Image">
-                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="addImage:" destination="maS-fR-0VM" eventType="touchUpInside" id="u12-tL-VAr"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Vr-h4-fAp">
                                 <rect key="frame" x="243" y="473" width="114" height="30"/>
@@ -135,6 +138,9 @@
                                     <constraint firstAttribute="width" constant="114" id="tCf-ct-asS"/>
                                 </constraints>
                                 <state key="normal" title="Create Recipe"/>
+                                <connections>
+                                    <action selector="createRecipe:" destination="maS-fR-0VM" eventType="touchUpInside" id="hit-Ha-3JN"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -158,6 +164,12 @@
                             <constraint firstItem="bDM-ce-tDb" firstAttribute="top" secondItem="8l4-mh-Gck" secondAttribute="bottom" constant="23" id="rHN-vt-Snt"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="imgRecipe" destination="bDM-ce-tDb" id="btZ-NZ-jvF"/>
+                        <outlet property="lblDescrption" destination="lCQ-Cz-EgV" id="b6W-po-DZF"/>
+                        <outlet property="lblSteps" destination="8l4-mh-Gck" id="g59-yx-gHw"/>
+                        <outlet property="lblTitle" destination="Zqm-NQ-mYN" id="tIs-Oe-jLC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cwo-fc-JkH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

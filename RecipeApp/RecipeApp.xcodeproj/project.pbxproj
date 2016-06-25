@@ -18,6 +18,7 @@
 		0D8F5F171D1E771200B22F96 /* Recipe+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D8F5F151D1E771200B22F96 /* Recipe+CoreDataProperties.swift */; };
 		0D8F5F181D1E771200B22F96 /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D8F5F161D1E771200B22F96 /* Recipe.swift */; };
 		0D8F5F1A1D1E781E00B22F96 /* RecipeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D8F5F191D1E781E00B22F96 /* RecipeCell.swift */; };
+		0D8F5F1C1D1E7DD400B22F96 /* AddRecipeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D8F5F1B1D1E7DD400B22F96 /* AddRecipeVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		0D8F5F151D1E771200B22F96 /* Recipe+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Recipe+CoreDataProperties.swift"; path = "../Recipe+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		0D8F5F161D1E771200B22F96 /* Recipe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Recipe.swift; path = ../Recipe.swift; sourceTree = "<group>"; };
 		0D8F5F191D1E781E00B22F96 /* RecipeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipeCell.swift; sourceTree = "<group>"; };
+		0D8F5F1B1D1E7DD400B22F96 /* AddRecipeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddRecipeVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -157,6 +159,7 @@
 			isa = PBXGroup;
 			children = (
 				0D8F5EE31D1E71D100B22F96 /* ViewController.swift */,
+				0D8F5F1B1D1E7DD400B22F96 /* AddRecipeVC.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -294,6 +297,7 @@
 			files = (
 				0D8F5EEA1D1E71D100B22F96 /* RecipeApp.xcdatamodeld in Sources */,
 				0D8F5F171D1E771200B22F96 /* Recipe+CoreDataProperties.swift in Sources */,
+				0D8F5F1C1D1E7DD400B22F96 /* AddRecipeVC.swift in Sources */,
 				0D8F5EE41D1E71D100B22F96 /* ViewController.swift in Sources */,
 				0D8F5F1A1D1E781E00B22F96 /* RecipeCell.swift in Sources */,
 				0D8F5EE21D1E71D100B22F96 /* AppDelegate.swift in Sources */,
