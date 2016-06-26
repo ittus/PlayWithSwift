@@ -18,11 +18,22 @@ class LocationVC: UIViewController, UITableViewDelegate, UITableViewDataSource, 
     
     let locationManager = CLLocationManager()
     
+    let addresses = [
+        "780 Mission St, San Francisco, CA 94103, United States",
+        "799 Market St, San Francisco, CA 94103, United States",
+        "899 Market St, San Francisco, CA 94103, USA"
+    ]
+
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         map.delegate = self
         tableView.delegate = self
         tableView.dataSource = self
+        
+        for add in addresses {
+            getPlacemarkFromAddress(add)
+        }
     }
 
     override func viewDidAppear(animated: Bool) {
@@ -60,6 +71,33 @@ class LocationVC: UIViewController, UITableViewDelegate, UITableViewDataSource, 
     func mapView(mapView: MKMapView, didUpdateUserLocation userLocation: MKUserLocation) {
         if let loc = userLocation.location {
             zoomToUserLocation(loc)
+        }
+    }
+    
+    func mapView(mapView: MKMapView, viewForAnnotation annotation: MKAnnotation) -> MKAnnotationView? {
+        if annotation.isKindOfClass(BootcampAnnotation) {
+            let annoView = MKPinAnnotationView(annotation: annotation, reuseIdentifier: "Default")
+            annoView.pinTintColor = UIColor.yellowColor()
+            return annoView
+            
+        } else if annotation.isKindOfClass(MKUserLocation) {
+            return nil
+        }
+        
+        return nil
+    }
+    
+    func createAnnotationForLocation(location: CLLocation) {
+        let bootcamp = BootcampAnnotation(coordinate: location.coordinate)
+        map.addAnnotation(bootcamp)
+    }
+    func getPlacemarkFromAddress(address: String) {
+        CLGeocoder().geocodeAddressString(address) { (placemarks: [CLPlacemark]?, error: NSError?) in
+            if let marks = placemarks where marks.count > 0 {
+                if let loc = marks[0].location {
+                    self.createAnnotationForLocation(loc)
+                }
+            }
         }
     }
 

@@ -15,6 +15,7 @@
 		0D09ECFC1D1F884C0079F6F2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0D09ECFA1D1F884C0079F6F2 /* LaunchScreen.storyboard */; };
 		0D09ED071D1F884C0079F6F2 /* BootCampLocationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D09ED061D1F884C0079F6F2 /* BootCampLocationTests.swift */; };
 		0D09ED121D1F884C0079F6F2 /* BootCampLocationUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D09ED111D1F884C0079F6F2 /* BootCampLocationUITests.swift */; };
+		0DDF35ED1D1F8F7400954B85 /* BootcampAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DDF35EC1D1F8F7400954B85 /* BootcampAnnotation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		0D09ED0D1D1F884C0079F6F2 /* BootCampLocationUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BootCampLocationUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0D09ED111D1F884C0079F6F2 /* BootCampLocationUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BootCampLocationUITests.swift; sourceTree = "<group>"; };
 		0D09ED131D1F884C0079F6F2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0DDF35EC1D1F8F7400954B85 /* BootcampAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BootcampAnnotation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 				0D09ECF81D1F884C0079F6F2 /* Assets.xcassets */,
 				0D09ECFA1D1F884C0079F6F2 /* LaunchScreen.storyboard */,
 				0D09ECFD1D1F884C0079F6F2 /* Info.plist */,
+				0DDF35EC1D1F8F7400954B85 /* BootcampAnnotation.swift */,
 			);
 			path = BootCampLocation;
 			sourceTree = "<group>";
@@ -262,6 +265,7 @@
 				0D09ECF41D1F884C0079F6F2 /* LocationVC.swift in Sources */,
 				0D09ECF01D1F884C0079F6F2 /* AppDelegate.swift in Sources */,
 				0D09ECF21D1F884C0079F6F2 /* FirstViewController.swift in Sources */,
+				0DDF35ED1D1F8F7400954B85 /* BootcampAnnotation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -488,6 +492,7 @@
 				0D09ED181D1F884C0079F6F2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0D09ED191D1F884C0079F6F2 /* Build configuration list for PBXNativeTarget "BootCampLocationTests" */ = {
 			isa = XCConfigurationList;
@@ -496,6 +501,7 @@
 				0D09ED1B1D1F884C0079F6F2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0D09ED1C1D1F884C0079F6F2 /* Build configuration list for PBXNativeTarget "BootCampLocationUITests" */ = {
 			isa = XCConfigurationList;
@@ -504,6 +510,7 @@
 				0D09ED1E1D1F884C0079F6F2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
