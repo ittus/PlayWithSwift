@@ -16,6 +16,8 @@ UISearchBarDelegate {
     
     @IBOutlet weak var searchBar: UISearchBar!
     var pokemonList = [Pokemon]()
+    var filteredPokemon = [Pokemon]()
+    var isSearchMode = false
     
     var musicPlayer: AVAudioPlayer!
     
@@ -24,6 +26,7 @@ UISearchBarDelegate {
         collection.delegate = self
         collection.dataSource = self
         searchBar.delegate = self
+        searchBar.returnKeyType = UIReturnKeyType.Done
         
         initAudio()
         parsePokemonCSV()
@@ -69,12 +72,21 @@ UISearchBarDelegate {
     }
     
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 718
+        if isSearchMode {
+            return filteredPokemon.count
+        } else {
+            return pokemonList.count
+        }
     }
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         if let cell = collectionView.dequeueReusableCellWithReuseIdentifier("pokeCell", forIndexPath: indexPath) as? PokeCell {
-            let pokemon = pokemonList[indexPath.row]
+            let pokemon: Pokemon!
+            if isSearchMode {
+                pokemon = filteredPokemon[indexPath.row]
+            } else {
+                pokemon = pokemonList[indexPath.row]
+            }
             cell.configureCell(pokemon)
             return cell
         } else {
@@ -99,6 +111,21 @@ UISearchBarDelegate {
             musicPlayer.play()
             sender.alpha = 1.0
         }
+    }
+    func searchBarSearchButtonClicked(searchBar: UISearchBar) {
+        view.endEditing(true)
+    }
+    func searchBar(searchBar: UISearchBar, textDidChange searchText: String) {
+        if searchBar.text == nil || searchBar.text == "" {
+            isSearchMode = false
+            view.endEditing(true)
+        } else {
+            isSearchMode = true
+            let lower = searchBar.text!.lowercaseString
+            print(lower)
+            filteredPokemon = pokemonList.filter({$0.name.rangeOfString(lower) != nil})
+        }
+        collection.reloadData()
     }
 
 
