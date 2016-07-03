@@ -231,6 +231,9 @@
                                             <constraint firstAttribute="width" constant="50" id="aws-eM-oy2"/>
                                         </constraints>
                                         <state key="normal" image="back"/>
+                                        <connections>
+                                            <action selector="btnBackPressed:" destination="WdD-Er-gye" eventType="touchUpInside" id="K8b-Io-uuh"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="1" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -422,7 +425,16 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="imgMain" destination="Ngs-UR-kjY" id="BYZ-1I-Ri4"/>
+                        <outlet property="lblBaseAttack" destination="Hrl-Xt-Gc2" id="f6D-yz-dte"/>
+                        <outlet property="lblDefense" destination="4VV-us-b5R" id="F6V-Pd-NM1"/>
+                        <outlet property="lblDescription" destination="biL-Dr-EGR" id="NH6-Uc-kTD"/>
+                        <outlet property="lblEvolution" destination="s8f-xe-XNS" id="LL4-nz-hji"/>
+                        <outlet property="lblHeight" destination="2j9-75-0Sq" id="S1O-8z-aTu"/>
                         <outlet property="lblName" destination="huR-Pq-97y" id="wrE-lk-7WD"/>
+                        <outlet property="lblPokedexId" destination="U7n-Qr-Z7j" id="nu5-ku-46z"/>
+                        <outlet property="lblType" destination="abQ-Yp-j2t" id="guB-MM-qqf"/>
+                        <outlet property="lblWeight" destination="cRm-Ya-WUF" id="696-6C-F2b"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cOK-dN-yhY" userLabel="First Responder" sceneMemberID="firstResponder"/>
