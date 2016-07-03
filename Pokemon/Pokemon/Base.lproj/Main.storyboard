@@ -5,6 +5,11 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="pokemon.ttf">
+            <string>PokemonSolidNormal</string>
+        </mutableArray>
+    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -20,10 +25,45 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bnW-os-Wrm">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="74"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pokedex" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OsY-ya-7pE">
+                                        <rect key="frame" x="243" y="16" width="114" height="42"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="42" id="SAr-i5-90t"/>
+                                            <constraint firstAttribute="width" constant="114" id="d2x-Fg-Z0P"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="PokemonSolidNormal" family="Pokemon Solid" pointSize="30"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FNf-IS-9MI">
+                                        <rect key="frame" x="544" y="23" width="48" height="43"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="48" id="2Yx-YZ-cn8"/>
+                                            <constraint firstAttribute="height" constant="43" id="pCQ-xc-OyM"/>
+                                        </constraints>
+                                        <state key="normal" title="Button" image="music"/>
+                                        <connections>
+                                            <action selector="btnMusicPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ArP-yZ-rKz"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
                                 <color key="backgroundColor" red="1" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
+                                    <constraint firstItem="OsY-ya-7pE" firstAttribute="centerX" secondItem="bnW-os-Wrm" secondAttribute="centerX" id="8Yp-c7-kT1"/>
+                                    <constraint firstAttribute="bottom" secondItem="FNf-IS-9MI" secondAttribute="bottom" constant="8" id="Aul-on-XpQ"/>
                                     <constraint firstAttribute="height" constant="74" id="b8N-wH-J4j"/>
+                                    <constraint firstItem="OsY-ya-7pE" firstAttribute="centerY" secondItem="bnW-os-Wrm" secondAttribute="centerY" id="i9z-Xf-FIE"/>
+                                    <constraint firstItem="OsY-ya-7pE" firstAttribute="centerX" secondItem="bnW-os-Wrm" secondAttribute="centerX" id="kn6-VX-l7U"/>
+                                    <constraint firstItem="OsY-ya-7pE" firstAttribute="centerY" secondItem="bnW-os-Wrm" secondAttribute="centerY" id="olv-Mf-xjo"/>
+                                    <constraint firstAttribute="trailing" secondItem="FNf-IS-9MI" secondAttribute="trailing" constant="8" id="xn6-G1-mLr"/>
                                 </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="8Yp-c7-kT1"/>
+                                        <exclude reference="i9z-Xf-FIE"/>
+                                    </mask>
+                                </variation>
                             </view>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="bg" translatesAutoresizingMaskIntoConstraints="NO" id="hqa-c2-Up7">
                                 <rect key="frame" x="0.0" y="118" width="600" height="482"/>
@@ -113,6 +153,7 @@
                             <constraint firstItem="hqa-c2-Up7" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="5dQ-nP-QgR"/>
                             <constraint firstItem="nYA-2W-Ijz" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="AdW-0O-jj9"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="hqa-c2-Up7" secondAttribute="bottom" id="AkH-b8-i8G"/>
+                            <constraint firstItem="bnW-os-Wrm" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Dz7-fq-bac"/>
                             <constraint firstAttribute="trailingMargin" secondItem="nYA-2W-Ijz" secondAttribute="trailing" constant="-20" id="GSF-JV-yBC"/>
                             <constraint firstItem="bnW-os-Wrm" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Hby-kd-EVb"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="hqa-c2-Up7" secondAttribute="bottom" id="L00-rJ-amr"/>
@@ -129,11 +170,14 @@
                             <constraint firstItem="iIO-o9-avF" firstAttribute="top" secondItem="nYA-2W-Ijz" secondAttribute="bottom" constant="20" id="oDG-k3-KT6"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="iIO-o9-avF" secondAttribute="bottom" constant="20" id="oFV-ZX-5JN"/>
                             <constraint firstAttribute="trailingMargin" secondItem="hqa-c2-Up7" secondAttribute="trailing" constant="-20" id="qL4-Ny-S1I"/>
+                            <constraint firstItem="bnW-os-Wrm" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="tzO-Lf-jKX"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="hqa-c2-Up7" secondAttribute="bottom" id="uMb-pd-TkP"/>
                             <constraint firstItem="hqa-c2-Up7" firstAttribute="top" secondItem="nYA-2W-Ijz" secondAttribute="bottom" id="vVO-fz-VNC"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
+                                <exclude reference="Dz7-fq-bac"/>
+                                <exclude reference="tzO-Lf-jKX"/>
                                 <exclude reference="2mV-8o-Eqt"/>
                                 <exclude reference="L0C-wR-lK3"/>
                                 <exclude reference="SYB-Ux-9cn"/>
@@ -157,5 +201,6 @@
     <resources>
         <image name="103" width="136" height="120"/>
         <image name="bg" width="1920" height="1200"/>
+        <image name="music" width="100" height="100"/>
     </resources>
 </document>
