@@ -9,10 +9,12 @@
 import UIKit
 import AVFoundation
 
-class ViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
+class ViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout,
+UISearchBarDelegate {
     
     @IBOutlet weak var collection: UICollectionView!
     
+    @IBOutlet weak var searchBar: UISearchBar!
     var pokemonList = [Pokemon]()
     
     var musicPlayer: AVAudioPlayer!
@@ -21,6 +23,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         super.viewDidLoad()
         collection.delegate = self
         collection.dataSource = self
+        searchBar.delegate = self
         
         initAudio()
         parsePokemonCSV()
