@@ -31,6 +31,11 @@ class PokemonDetailVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         lblName.text = pokemon.name
+        
+        imgMain.image = UIImage(named: "\(pokemon.pokedexId)")
+        pokemon.downloadPokemonDetails { 
+            
+        }
     }
     
     @IBAction func btnBackPressed(sender: UIButton) {
