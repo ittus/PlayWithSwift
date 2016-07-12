@@ -27,18 +27,55 @@ class PokemonDetailVC: UIViewController {
     
     @IBOutlet weak var lblEvolution: UILabel!
     
+    @IBOutlet weak var currentEvoImg: UIImageView!
+    @IBOutlet weak var nextEvoImg: UIImageView!
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         lblName.text = pokemon.name
         
-        imgMain.image = UIImage(named: "\(pokemon.pokedexId)")
-        pokemon.downloadPokemonDetails { 
-            
+        let img = UIImage(named: "\(pokemon.pokedexId)")
+        
+        imgMain.image = img
+        currentEvoImg.image = img
+        
+        pokemon.downloadPokemonDetails { () -> () in
+            self.updateUI()
         }
+        
+        
+    }
+    
+    func updateUI() {
+        lblDescription.text = pokemon.description
+        lblType.text = pokemon.type
+        lblDefense.text = pokemon.defense
+        lblHeight.text = pokemon.height
+        lblWeight.text = pokemon.weight
+        lblBaseAttack.text = pokemon.attack
+        lblPokedexId.text = "\(pokemon.pokedexId)"
+        
+        if pokemon.nextEvolutionId == "" {
+            lblEvolution.text = "No Evolution"
+            nextEvoImg.hidden = true
+        } else {
+            nextEvoImg.hidden = false
+            nextEvoImg.image = UIImage(named: "\(pokemon.nextEvolutionId)")
+            
+            var str = "Next Evolution: \(pokemon.nextEvolutionTxt)"
+            
+            if pokemon.nextEvolutionLvl != "" {
+                str += " - LVL \(pokemon.nextEvolutionLvl)"
+            }
+        }
+        
+        
     }
     
     @IBAction func btnBackPressed(sender: UIButton) {
+        dismissViewControllerAnimated(true, completion: nil)
     }
     
     
